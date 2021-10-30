@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from './pages/Home';
+// import Home from './pages/Home';
+import FireBaseScene from './components/FireBaseScene';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
@@ -11,7 +12,7 @@ const Main = () => {
 
         <BrowserRouter>
             <Switch>
-                <Route exact path="/" component={Home} />
+                <Route exact path="/" component={FireBaseScene} />
                 <Route path="/about" component={About} />
                 <Route path="/projects" component={InProgress} />
                 <Route path="/resume" component={Resume} />

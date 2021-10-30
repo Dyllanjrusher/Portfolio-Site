@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import './index.css';
+import './index.scss';
 import me from './me.jpg';
-import '@fontsource/roboto/700.css';
+import '@fontsource/roboto/700.scss';
 
 /** Components */
 import Header from '../../components/Header';
@@ -9,6 +9,7 @@ import FireBaseScene from '../../components/FireBaseScene';
 /** Components */
 
 import { Paper, Typography, Grid } from '@mui/material';
+import HTML from '@react-three/drei';
 
 const Home = () => {
     return (

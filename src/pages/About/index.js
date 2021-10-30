@@ -1,5 +1,5 @@
 import React from "react";
-import './index.css';
+import './index.scss';
 
 import { Stars } from "@react-three/drei";
 import { Canvas } from '@react-three/fiber';

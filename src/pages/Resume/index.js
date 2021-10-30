@@ -1,7 +1,7 @@
 import React from "react";
-import './index.css';
+import './index.scss';
 import resume from './resume.pdf';
-import { Stars } from "@react-three/drei";
+import { Stars, Html } from "@react-three/drei";
 import { Canvas } from '@react-three/fiber';
 
 /** Components */
@@ -10,7 +10,7 @@ import Header from '../../components/Header';
 
 import { Paper } from '@mui/material';
 const Contact = () => {
-   
+
     return (
         <>
             <Header />
@@ -18,17 +18,15 @@ const Contact = () => {
 
                 <Canvas dpr={window.devicePixelRatio}>
                     <color attach="background" args={['Black']} />
-
+                    <mesh position={[0, -1, 0]}>
+                        <sphereGeometry />
+                        <Html center>
+                            {resume && <iframe id="resume" src={resume} />}
+                        </Html>
+                        <meshBasicMaterial />
+                    </mesh>
                     <Stars />
                 </Canvas>
-
-                <div className='content' id='contact-content'>
-                    <section id='contact-section'>
-                        <Paper className="darkText">
-                            {resume && <iframe id="resume" src={resume} />}   
-                        </Paper>
-                    </section>
-                </div>
             </div >
         </>
     )
