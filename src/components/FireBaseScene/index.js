@@ -1,7 +1,7 @@
 import React, { Suspense, useState, useRef } from 'react';
 
 import resume from './resume.pdf';
-import './index.scss';
+// import './index.scss';
 
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { PerspectiveCamera, OrbitControls, Stars, Html, Plane } from "@react-three/drei";

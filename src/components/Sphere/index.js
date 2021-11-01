@@ -1,8 +1,8 @@
 import React from 'react';
-import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { useLoader } from '@react-three/fiber';
+import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
-const Sphere = React.forwardRef(({ placeholder }, ref) => {
+const Sphere = React.forwardRef((props, ref) => {
 
     const [colorMap, normalMap] = useLoader(TextureLoader, [
         'material_1_baseColor.jpeg',
@@ -11,7 +11,7 @@ const Sphere = React.forwardRef(({ placeholder }, ref) => {
 
 
     return (
-        <mesh ref={ref} position={[-1.5, -1, 12]}>
+        <mesh ref={ref} position={props.position}>
             <sphereGeometry
                 args={[3, 32, 32]}
             />

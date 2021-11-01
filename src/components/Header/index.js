@@ -15,7 +15,6 @@ import {
 } from '@mui/material';
 
 import logo from '../../PortfolioLogo.png';
-import './index.scss';
 
 const Header = () => {
     const [open, setOpen] = useState(false);
@@ -46,8 +45,8 @@ const Header = () => {
                         </Grid>
                         <Grid item xs={5} md={3} lg={3}>
                             <Stack>
-                                <Typography align='left' sx={{ mt: 2 }}> Dyllan Usher </Typography>
-                                <Typography align='left'> Software Developer </Typography>
+                                <Typography align='left' sx={{ mt: 2, fontSize: "2rem" }}> Dyllan Usher </Typography>
+                                <Typography align='left' sx = {{fontSize: "1.3rem"}}> Software Developer </Typography>
                             </Stack>
                         </Grid>
                         <Grid item md lg >
@@ -57,7 +56,7 @@ const Header = () => {
                                     to={pageRoutes[index]}
                                     color="inherit"
                                     component={Link}
-                                    sx={{ mt: 2.5 }}
+                                    sx={{ mt: 2.5, fontSize: "2rem"}}
                                 >
                                     {text}
                                 </Button>

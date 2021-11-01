@@ -1,35 +1,46 @@
 import React from "react";
-import './index.scss';
-import resume from './resume.pdf';
-import { Stars, Html } from "@react-three/drei";
-import { Canvas } from '@react-three/fiber';
+import '../../Sass/Resume.scss';
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
+import { Link } from 'react-router-dom';
 
 /** Components */
 import Header from '../../components/Header';
 /** Components */
 
 import { Paper } from '@mui/material';
-const Contact = () => {
+const Resume = () => {
+    const { height, width } = useWindowDimensions();
 
     return (
-        <>
-            <Header />
-            <div id="canvas-container">
+        <div className="resume-grid">
 
-                <Canvas dpr={window.devicePixelRatio}>
-                    <color attach="background" args={['Black']} />
-                    <mesh position={[0, -1, 0]}>
-                        <sphereGeometry />
-                        <Html center>
-                            {resume && <iframe id="resume" src={resume} />}
-                        </Html>
-                        <meshBasicMaterial />
-                    </mesh>
-                    <Stars />
-                </Canvas>
-            </div >
-        </>
+            <Header className="header" />
+            <Document className='resume' file='/DyllanUsherResume.pdf'>
+                <div className="pdf-download">
+                    <Link className="resume-link" to="/DyllanUsherResume.pdf" target="_blank" download>
+
+                        <div className="download-icon">
+
+                            <img src="Icons/download.svg" alt="aws" className="icon" />
+                        </div>
+
+                    </Link>
+                </div>
+                <Page pageNumber={1} renderMode={"svg"} width={2 / 3 * width} />
+                <div className="pdf-download">
+                    <Link className="resume-link" to="/DyllanUsherResume.pdf" target="_blank" download>
+
+                        <div className="download-icon">
+
+                            <img src="Icons/download.svg" alt="aws" className="icon" />
+                        </div>
+
+                    </Link>
+                </div>
+            </Document>
+        </div>
     )
 }
 
-export default Contact;
+export default Resume;

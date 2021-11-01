@@ -1,3 +1,9 @@
+body {
+  background: #ac6f19;
+  z-index: -1;
+
+}
+
 .App {
   text-align: center;
 }
@@ -26,4 +32,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+div.logo-header > img {
+  max-width: 5em;
+  max-height: 100%;
+  z-index: 5;
 }

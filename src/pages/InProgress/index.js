@@ -1,49 +1,24 @@
 import React from "react";
-import './index.scss';
-
-import { Stars } from "@react-three/drei";
-import { Canvas } from '@react-three/fiber';
+import '../../Sass/Wip.scss';
 
 /** Components */
 import Header from '../../components/Header';
 /** Components */
 
-import { Paper, Typography, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Checkbox, Box } from '@mui/material';
 const InProgress = () => {
 
     return (
-        <>
-            <Header />
-            <div id="canvas-container">
+        <div className="wip-grid">
 
-                <Canvas dpr={window.devicePixelRatio}>
-                    <color attach="background" args={['Black']} />
-
-                    <Stars />
-                </Canvas>
-
-                <div className='content' id='contact-content'>
-                    <section id='contact-section'>
-                        <Paper className="darkText">
-                            <Typography variant='h4' align='center'>
-                                I'm Sorry, This page is not yet available.
-                                <br />
-                                <br />
-                                <br />
-
-                            </Typography>
-                            <Typography variant='body1' align='center'>
-                                I try to be conscious about balancing my job, life, and my second job, <br />
-                                Finding a new job! <br />
-                                <br />
-                                I plan to add content to this page (and improve the site in general) by March 2022. 
-
-                            </Typography>
-                        </Paper>
-                    </section>
-                </div>
-            </div >
-        </>
+            <Header className="header"/>
+            <div className="wip-container">
+                <h1 className='wip-header'>I'm sorry, this page is not yet available.</h1>
+                <p className='wip-body'>
+                    I try to be conscious about balancing my job, life, and my second job, Finding a new job!
+                     I plan to add content to this page in the near future.
+                </p>
+            </div>
+        </div>
     )
 }
 

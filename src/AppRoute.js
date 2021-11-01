@@ -1,22 +1,21 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-// import Home from './pages/Home';
-import FireBaseScene from './components/FireBaseScene';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import Home from './pages/Home';
 import Resume from './pages/Resume';
 import InProgress from './pages/InProgress';
+import Projects from './pages/Projects';
+
+import ScrollToTop from './components/ScrollToTop';
 
 const Main = () => {
 
     return (
 
         <BrowserRouter>
+            <ScrollToTop />
             <Switch>
-                <Route exact path="/" component={FireBaseScene} />
-                <Route path="/about" component={About} />
-                <Route path="/projects" component={InProgress} />
+                <Route exact path="/" component={Home} />
+                <Route path="/projects" component={Projects} />
                 <Route path="/resume" component={Resume} />
-                <Route path="/contact" component={Contact} />
                 <Route path="/blog" component={InProgress} />
             </Switch>
         </BrowserRouter>
