@@ -15,7 +15,6 @@ import {
 } from '@mui/material';
 
 import logo from '../../PortfolioLogo.png';
-import './index.css';
 
 const Header = () => {
     const [open, setOpen] = useState(false);
@@ -31,8 +30,8 @@ const Header = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
     const isLarge = useMediaQuery(theme.breakpoints.up('lg'));
-    let pageLabels = ['Home', 'About Me', 'Projects', 'Blog', 'Contact', 'Resume'];
-    let pageRoutes = ['/', '/about', '/projects', '/blog', '/contact', '/resume'];
+    let pageLabels = ['Home', 'Projects', 'Blog', 'Resume'];
+    let pageRoutes = ['/', '/projects', '/blog', '/resume'];
 
     return (
         <header>
@@ -46,18 +45,18 @@ const Header = () => {
                         </Grid>
                         <Grid item xs={5} md={3} lg={3}>
                             <Stack>
-                                <Typography align='left' sx={{ mt: 2 }}> Dyllan Usher </Typography>
-                                <Typography align='left'> Software Developer </Typography>
+                                <Typography align='left' sx={{ mt: 2, fontSize: "2rem" }}> Dyllan Usher </Typography>
+                                <Typography align='left' sx = {{fontSize: "1.3rem"}}> Software Developer </Typography>
                             </Stack>
                         </Grid>
                         <Grid item md lg >
-                            {!isMobile && pageLabels.slice(0, isLarge ? 6 : 5).map((text, index) => (
+                            {!isMobile && pageLabels.slice(0, isLarge ? 4 : 3).map((text, index) => (
                                 <Button
                                     key={text}
                                     to={pageRoutes[index]}
                                     color="inherit"
                                     component={Link}
-                                    sx={{ mt: 2.5 }}
+                                    sx={{ mt: 2.5, fontSize: "2rem"}}
                                 >
                                     {text}
                                 </Button>

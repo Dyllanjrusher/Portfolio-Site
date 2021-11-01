@@ -1,0 +1,35 @@
+.wip-grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 33% 0%;
+  grid-auto-flow: row;
+  justify-items: center;
+  justify-content: center;
+  grid-template-areas: ". header ." ". wip-container ." ". . .";
+  width: 100%;
+  height: 100vh;
+}
+.wip-grid .header {
+  grid-area: header;
+}
+.wip-grid .wip-container {
+  grid-area: wip-container;
+  box-shadow: 0px 8px 36px #222;
+  background-color: #1e5128;
+  box-shadow: 0px 8px 36px #222;
+  padding: 1em;
+  border-radius: 30px;
+  min-height: 33.33vh;
+  min-width: 33.33vw;
+  color: #fff;
+  text-align: center;
+}
+.wip-grid .wip-container .wip-header {
+  padding-bottom: 0.5em;
+  padding-top: 1em;
+}
+.wip-grid .wip-container .wip-body {
+  padding: 0em 4em 0em;
+  font-size: 2rem;
+}
