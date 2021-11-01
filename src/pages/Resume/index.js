@@ -16,7 +16,7 @@ const Resume = () => {
         <div className="resume-grid">
 
             <Header className="header" />
-            <Document className='resume' file='/DyllanUsherResume1.pdf'>
+            <Document className='resume' file='/DyllanUsherResume.pdf'>
                 <div className="pdf-download">
                     <Link className="resume-link" to="/DyllanUsherResume.pdf" target="_blank" download>
 
