@@ -11,12 +11,12 @@ import Header from '../../components/Header';
 import { Paper } from '@mui/material';
 const Resume = () => {
     const { height, width } = useWindowDimensions();
-
+    
     return (
         <div className="resume-grid">
 
             <Header className="header" />
-            <Document className='resume' file='/DyllanUsherResume.pdf'>
+            <Document className='resume' file='/DyllanUsherResume1.pdf'>
                 <div className="pdf-download">
                     <Link className="resume-link" to="/DyllanUsherResume.pdf" target="_blank" download>
 
@@ -27,7 +27,7 @@ const Resume = () => {
 
                     </Link>
                 </div>
-                <Page pageNumber={1} renderMode={"svg"} width={2 / 3 * width} />
+                <Page pageNumber={1} width={2 / 3 * width}  />
                 <div className="pdf-download">
                     <Link className="resume-link" to="/DyllanUsherResume.pdf" target="_blank" download>
 
